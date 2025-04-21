@@ -6,3 +6,5 @@ COPY getUser.py /app
 EXPOSE 5000
 VOLUME /app/users_log
 CMD ["python3", "getUser.py"]
+
+

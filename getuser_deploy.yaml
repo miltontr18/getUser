@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: getuser
+spec:
+  selector:
+    matchLabels:
+      app: getuser
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: getuser
+    spec:
+      containers:
+      - name: getuser-python3
+        image: miltontr86/getuser_app:v1.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
